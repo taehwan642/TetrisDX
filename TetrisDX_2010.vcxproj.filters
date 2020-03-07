@@ -96,6 +96,7 @@
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Tetromino.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameScene.h" />
@@ -117,6 +118,7 @@
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Tetromino.h" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">

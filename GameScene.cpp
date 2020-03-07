@@ -4,11 +4,12 @@
 void GameScene::Init()
 {
 	cout << "INIT" << endl;
+	Camera::GetIns()->CameraInit();
+	TetrominoMNG::GetIns()->CreateTetromino();
 }
 
 void GameScene::Update()
 {
-	cout << "UPDATE" << endl;
 
 }
 

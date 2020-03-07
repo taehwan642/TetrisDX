@@ -1,5 +1,8 @@
 #pragma once
 #include "Scene.h"
+#include "Sprite.h"
+#include "Camera.h"
+#include "Tetromino.h"
 class GameScene :
 	public Scene
 {

@@ -44,6 +44,7 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
 //--------------------------------------------------------------------------------------
 void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
 {
+    exit(0);
 }
 
 
@@ -70,7 +71,7 @@ int main(void)
     DXUTSetHotkeyHandling( true, true, true );  // handle the default hotkeys
     DXUTSetCursorSettings( true, true ); // Show the cursor and clip it when in full screen
     DXUTCreateWindow( L"TetrisDX" );
-    DXUTCreateDevice( true, 800, 800 );
+    DXUTCreateDevice( true, Screen_Width, Screen_Height );
 
     Director::GetIns()->SceneSet(new GameScene);
 

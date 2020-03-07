@@ -18,4 +18,5 @@ void Director::SceneUpdate()
 {
 	if(currentScene)
 		currentScene->Update();
+	Renderer::GetIns()->Render();
 }
