@@ -388,6 +388,7 @@
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Tetromino.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClInclude Include="Camera.h" />
@@ -398,6 +399,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Stage.h" />
     <ClInclude Include="Tetromino.h" />
     <ClInclude Include="Texture.h" />
     <None Include="DXUT\Optional\directx.ico" />

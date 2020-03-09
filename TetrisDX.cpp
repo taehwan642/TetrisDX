@@ -14,6 +14,7 @@
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc,
                                      void* pUserContext )
 {
+    srand(time(0));
     Director::GetIns()->DirectorInit();
     return S_OK;
 }
@@ -28,11 +29,12 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
     HRESULT hr;
 
     // Clear the render target and the zbuffer 
-    V( pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_ARGB( 0, 45, 50, 170 ), 1.0f, 0 ) );
+    V( pd3dDevice->Clear( 0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_ARGB( 0, 100, 100, 100 ), 1.0f, 0 ) );
 
     // Render the scene
     if( SUCCEEDED( pd3dDevice->BeginScene() ) )
     {
+        GLOBAL::deltatime = fElapsedTime * GLOBAL::timescale;
         Director::GetIns()->SceneUpdate();
         V( pd3dDevice->EndScene() );
     }

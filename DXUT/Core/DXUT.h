@@ -348,11 +348,15 @@ void      WINAPI DXUTDestroyState(); // Optional method to destroy DXUT's memory
 
 #endif
 #include <iostream>
+#include <time.h>
 #include <list>
+#include <vector>
 using namespace std;
 
 typedef D3DXVECTOR2 Vec2;
 typedef D3DXVECTOR3 Vec3;
 typedef D3DXCOLOR Color;
-#define Screen_Width 800
+#define Screen_Width 1000
 #define Screen_Height 800
+#define Stage_Width 10
+#define Stage_Height 15

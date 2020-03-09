@@ -15,6 +15,9 @@
     <Filter Include="Core">
       <UniqueIdentifier>{175e168e-8179-44f6-ad73-1edc80512903}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tetris">
+      <UniqueIdentifier>{dc5c3286-2327-479f-b7df-067d9d349a8d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -77,7 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TetrisDX.cpp" />
-    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Director.cpp">
       <Filter>Core</Filter>
     </ClCompile>
@@ -93,13 +95,24 @@
     <ClCompile Include="Node.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Sprite.cpp" />
-    <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Tetromino.cpp" />
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Tetromino.cpp">
+      <Filter>Tetris</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Tetris</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameScene.h" />
     <ClInclude Include="Director.h">
       <Filter>Core</Filter>
     </ClInclude>
@@ -115,10 +128,22 @@
     <ClInclude Include="Node.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Sprite.h" />
-    <ClInclude Include="Renderer.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Tetromino.h" />
+    <ClInclude Include="Sprite.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Tetromino.h">
+      <Filter>Tetris</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>Tetris</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">

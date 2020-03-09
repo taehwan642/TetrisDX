@@ -15,8 +15,11 @@ Sprite::~Sprite()
 
 void Sprite::SetTexture(wstring path)
 {
-	_texture = TextureMNG::GetIns()->LoadTexture(path);
-	AddRenderTarget();
+	if (this != nullptr)
+	{
+		_texture = TextureMNG::GetIns()->LoadTexture(path);
+		AddRenderTarget();
+	}
 }
 
 void Sprite::AddRenderTarget()

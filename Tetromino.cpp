@@ -1,15 +1,40 @@
 #include "DXUT.h"
 #include "Tetromino.h"
 
+Block::Block()
+{
+	SetTexture(L"Block.png");
+	_color = { 0,0,0,0 };
+}
+
+void Block::SetBPos(Vec2 v)
+{
+	_position = v * 50;
+}
+
 Tetromino::Tetromino()
 {
-	_position = { 0,0 };
-	_scale = { 0.005,0.005 };
-	_isUI = false;
-	SetTexture(L"sibal.png");
+	
+}
+
+void Tetromino::Rotate()
+{
+}
+
+void Tetromino::MoveDown()
+{
+}
+
+void Tetromino::MoveLeft()
+{
+}
+
+void Tetromino::MoveRight()
+{
 }
 
 void TetrominoMNG::CreateTetromino()
 {
 	t = new Tetromino();
 }
+
