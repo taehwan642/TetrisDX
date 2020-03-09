@@ -16,6 +16,9 @@ public:
     int field[Stage_Height][Stage_Width] = {0};
     Vec2 a[4], b[4];
     int colornum;
+    int dx;
+    float delay;
+    bool rotate;
     int tetrominosss[7][4] =
     {
         1,3,5,7, // I

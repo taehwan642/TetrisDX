@@ -18,7 +18,7 @@ bool GameScene::check()
 				{
 					cout << field[i][j] << " ";
 				}
-				cout << endl << endl;
+				cout << endl;
 			}
 			return false;
 		}
@@ -39,6 +39,14 @@ void GameScene::Init()
 		a[i] = { 0,0 };
 		b[i] = { 0,0 };
 	}
+	int n = rand() % 7;
+	for (int i = 0; i < 4; i++)
+	{
+		a[i].x = (tetrominosss[n][i] % 2) + 3;
+		a[i].y = (tetrominosss[n][i] / 2);
+		//cout << a[i].x << " " << a[i].y << endl;
+
+	}
 	//Sprite* O[4];
 	//Vec2 a[4];
 	//int n = rand() % 8;
@@ -58,14 +66,42 @@ void GameScene::Init()
 	//field[1][5] = 1;
 	//field[1][4] = 1;
 	colornum = 1;
+	dx = 0;
+	rotate = false;
+	delay = 0.3f;
 }
 
 void GameScene::Update()
 {
 	Camera::GetIns()->Update();
+	if (DXUTIsKeyDown('A'))
+		dx = -1;
+	else if (DXUTIsKeyDown('D'))
+		dx = 1;
+	 if (DXUTWasKeyPressed('W'))
+		rotate = true;
+	 if (DXUTIsKeyDown('S'))
+		delay = 0.03f;
 	time += GLOBAL::deltatime;
-	if (time > 0.3f)
+	if (time > delay)
 	{
+		for (int i = 0; i < 4; i++) { b[i] = a[i]; a[i].x += dx; }
+		if (!check()) for (int i = 0; i < 4; i++) a[i] = b[i];
+
+
+		if (rotate)
+		{
+			Vec2 p = a[1]; //center of rotation
+			for (int i = 0; i < 4; i++)
+			{
+				int x = a[i].y - p.y;
+				int y = a[i].x - p.x;
+				a[i].x = p.x - x;
+				a[i].y = p.y + y;
+			}
+			if (!check()) for (int i = 0; i < 4; i++) a[i] = b[i];
+		}
+
 		cout << "tick" << endl;
 		for (int i = 0; i < Stage_Height; i++)
 		{
@@ -83,14 +119,28 @@ void GameScene::Update()
 			int n = rand() % 6;
 			for (int i = 0; i < 4; i++)
 			{
-				a[i].x = tetrominosss[n][i] % 2;
-				a[i].y = tetrominosss[n][i] / 2;
+				a[i].x = (tetrominosss[n][i] % 2) + 3;
+				a[i].y = (tetrominosss[n][i] / 2);
+
 				//cout << a[i].x << " " << a[i].y << endl;
 
 			}
 		}
-		
+		dx = 0;
 		time = 0;
+		delay = 0.3f;
+		rotate = false;
+	}
+	int k = Stage_Height - 1;
+	for (int i = Stage_Height - 1; i > 0; i--)
+	{
+		int count = 0;
+		for (int j = 0; j < Stage_Width; j++)
+		{
+			if (field[i][j]) count++;
+			field[k][j] = field[i][j];
+		}
+		if (count < Stage_Width) k--;
 	}
 	for (int i = 0; i < Stage_Height; i++)
 	{
@@ -104,8 +154,11 @@ void GameScene::Update()
 	}
 	for (int i = 0; i < 4; i++)
 	{
-		cout << a[i].x << " " << a[i].y << endl;
-
+		if (a[i].y < 0)
+		{
+			exit(1);
+			return;
+		}
 		StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->SetTexture(L"poly.png");
 	}
 }
