@@ -5,29 +5,26 @@
 // ! 추가로 각 도형마다 색깔 입히기. 그거 n에 따라서 하면 될듯 colornum
 // 4. 메인 씬 만들기
 // 5. 소리 띄우기 
-// T == 4;
+// I == 0, 200, 200, 255  1
+// Z == 255, 0, 0, 255  2
+// S == 0, 255, 50, 255  3
+// T == 4;_color = { 255,0,204,255 };  4
+// L == 255, 102, 0, 255  5
+// J == 0, 0, 255, 255  6
+// O == 255, 255, 0, 255  7
 bool GameScene::check()
 {
 	for (int i = 0; i < 4; i++)
 	{
 		if (a[i].x < 0 || a[i].x >= Stage_Width || a[i].y >= Stage_Height)
 		{
-			//cout << a[i].x << " " << a[i].y << endl;
 			return false;
 		}
 		else if (field[(int)a[i].y][(int)a[i].x])
 		{
-			for (int i = 0; i < Stage_Height; i++)
-			{
-				for (int j = 0; j < Stage_Width; j++)
-				{
-					//cout << field[i][j] << " ";
-				}
-				//cout << endl;
-			}
 			return false;
 		}
-	
+
 	}
 	return true;
 }
@@ -47,9 +44,9 @@ void GameScene::Init()
 		b[i] = { 0,0 };
 		c[i] = { 0,0 };
 	}
-
 	nextnum = rand() % 7;
 	int n = nextnum;
+	nextnum = rand() % 7;
 	for (int i = 0; i < 4; i++)
 	{
 		c[i].x = (tetrominosss[nextnum][i] % 2);
@@ -79,10 +76,16 @@ void GameScene::Init()
 	//field[1][4] = 1;
 
 	// 다음에 나올 애 ㅅ설정
-	colornum = 1 + rand() % 7;;
+	nextcolornum = nextnum + 1;
+	colornum = n + 1;
 	dx = 0;
 	rotate = false;
 	delay = 0.3f;
+	label = new Label();
+	score = 0;
+	label->_scale = { 2,2 };
+	label->Create_Label(score, { 600,200 });
+
 }
 
 void GameScene::Update()
@@ -109,35 +112,35 @@ void GameScene::Update()
 		dx = -1;
 	else if (DXUTWasKeyPressed('D'))
 		dx = 1;
-	 if (DXUTWasKeyPressed('W'))
+	if (DXUTWasKeyPressed('W'))
 		rotate = true;
-	 if (DXUTIsKeyDown('S'))
+	if (DXUTIsKeyDown('S'))
 		delay = 0.1f;
-	 if(DXUTWasKeyPressed('P'))
-		 for (int i = 0; i < Stage_Height; i++)
-		 {
-			 for (int j = 0; j < Stage_Width; j++)
-			 {
-				 cout << field[i][j] << " ";
-			 }
-			 cout << endl;
-		 }
-	 for (int i = 0; i < 4; i++) { b[i] = a[i]; a[i].x += dx; }
-	 if (!check()) for (int i = 0; i < 4; i++) a[i] = b[i];
+	if (DXUTWasKeyPressed('P'))
+		for (int i = 0; i < Stage_Height; i++)
+		{
+			for (int j = 0; j < Stage_Width; j++)
+			{
+				cout << field[i][j] << " ";
+			}
+			cout << endl;
+		}
+	for (int i = 0; i < 4; i++) { b[i] = a[i]; a[i].x += dx; }
+	if (!check()) for (int i = 0; i < 4; i++) a[i] = b[i];
 
 
-	 if (rotate)
-	 {
-		 Vec2 p = a[1]; //center of rotation
-		 for (int i = 0; i < 4; i++)
-		 {
-			 int x = a[i].y - p.y;
-			 int y = a[i].x - p.x;
-			 a[i].x = p.x - x;
-			 a[i].y = p.y + y;
-		 } // 반대로 회전행렬 입히기 Q, E 사용
-		 if (!check()) for (int i = 0; i < 4; i++) a[i] = b[i];
-	 }
+	if (rotate)
+	{
+		Vec2 p = a[1]; //center of rotation
+		for (int i = 0; i < 4; i++)
+		{
+			int x = a[i].y - p.y;
+			int y = a[i].x - p.x;
+			a[i].x = p.x - x;
+			a[i].y = p.y + y;
+		} // 반대로 회전행렬 입히기 Q, E 사용
+		if (!check()) for (int i = 0; i < 4; i++) a[i] = b[i];
+	}
 	time += GLOBAL::deltatime;
 	if (time > delay)
 	{
@@ -145,9 +148,15 @@ void GameScene::Update()
 		if (!check())
 		{
 			for (int i = 0; i < 4; i++) field[(int)b[i].y][(int)b[i].x] = colornum; // 조종하는 블록 맵에 설치 (놓아졌을때)
-			colornum = 1 + rand() % 7;
 			int n = nextnum;
-			nextnum = rand() % 7;
+			currnum = nextnum;
+			while (currnum == nextnum)
+			{
+				nextnum = rand() % 7;
+			}
+			nextcolornum = nextnum + 1;
+			colornum = n + 1;
+
 			for (int i = 0; i < 4; i++)
 			{
 				c[i].x = (tetrominosss[nextnum][i] % 2);
@@ -156,18 +165,19 @@ void GameScene::Update()
 				a[i].x = (tetrominosss[n][i] % 2) + 3;
 				a[i].y = (tetrominosss[n][i] / 2) - 1;
 			}
-			
 		}
 		delay = 0.3f;
 		time = 0;
 	}
-		dx = 0;
-		rotate = false;
-	for(int i = 0; i < 4; i++)
-	if (field[(int)b[i].y][(int)b[i].x] != 0)
-	{
-		// 꼇다. 패배한거임.
-	}
+	dx = 0;
+	rotate = false;
+	for (int i = 0; i < 4; i++)
+		if (field[(int)b[i].y][(int)b[i].x] != 0)
+		{
+			// 꼇다. 패배한거임.
+		}
+	
+	
 	int k = Stage_Height - 1;
 	for (int i = Stage_Height - 1; i > 0; i--)
 	{
@@ -175,10 +185,18 @@ void GameScene::Update()
 		for (int j = 0; j < Stage_Width; j++)
 		{
 			if (field[i][j]) count++;
+				// 점수!
 			field[k][j] = field[i][j];
 		}
-		if (count < Stage_Width) k--;
+		if (count < Stage_Width) k--; 
+		else
+		{
+			score += 250;
+			label->Create_Label(score, { 600,200 });
+		}
 	}
+
+
 	for (int i = 0; i < Stage_Height; i++)
 	{
 		for (int j = 0; j < Stage_Width; j++)
@@ -186,29 +204,28 @@ void GameScene::Update()
 			if (field[i][j] == 0)
 				continue;
 			StageMNG::GetIns()->stagegrids[i][j]->SetTexture(L"poly.png");
-			cout << colornum << endl;
 			switch (field[i][j])
 			{
 			case 1:
-				StageMNG::GetIns()->stagegrids[i][j]->_color = { 0,255,0,255 };
+				StageMNG::GetIns()->stagegrids[i][j]->_color = { 0, 200, 200, 255 };
 				break;
 			case 2:
-				StageMNG::GetIns()->stagegrids[i][j]->_color = { 255,0,0,255 };
+				StageMNG::GetIns()->stagegrids[i][j]->_color = { 255, 0, 0, 255 };
 				break;
 			case 3:
-				StageMNG::GetIns()->stagegrids[i][j]->_color = { 0,0,255,255 };
+				StageMNG::GetIns()->stagegrids[i][j]->_color = { 0, 255, 0, 255 };
 				break;
 			case 4:
 				StageMNG::GetIns()->stagegrids[i][j]->_color = { 255,0,204,255 };
 				break;
 			case 5:
-				StageMNG::GetIns()->stagegrids[i][j]->_color = { 51,50,0,255 };
+				StageMNG::GetIns()->stagegrids[i][j]->_color = { 1, 0.5f, 0, 255 };
 				break;
 			case 6:
-				StageMNG::GetIns()->stagegrids[i][j]->_color = { 102,0,0,255 };
+				StageMNG::GetIns()->stagegrids[i][j]->_color = { 0, 0, 255, 255 };
 				break;
 			case 7:
-				StageMNG::GetIns()->stagegrids[i][j]->_color = { 153,51,0,255 };
+				StageMNG::GetIns()->stagegrids[i][j]->_color = { 255, 255, 0, 255 };
 				break;
 			default:
 				break;
@@ -224,30 +241,55 @@ void GameScene::Update()
 		}
 		StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->SetTexture(L"poly.png");
 		StageMNG::GetIns()->otherstagegrids[c[i].y + 1][c[i].x + 2]->SetTexture(L"poly.png");
-		cout << colornum << endl;
-
-		switch(colornum)
+		//cout << colornum << endl;
+		switch (nextcolornum)
 		{
 		case 1:
-			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 0,255,0,255 };
+			StageMNG::GetIns()->otherstagegrids[c[i].y + 1][c[i].x + 2]->_color = { 0, 200, 200, 255 };
 			break;
 		case 2:
-			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 255,0,0,255 };
+			StageMNG::GetIns()->otherstagegrids[c[i].y + 1][c[i].x + 2]->_color = { 255, 0, 0, 255 };
 			break;
 		case 3:
-			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 0,0,255,255 };
+			StageMNG::GetIns()->otherstagegrids[c[i].y + 1][c[i].x + 2]->_color = { 0, 255, 0, 255 };
+			break;
+		case 4:
+			StageMNG::GetIns()->otherstagegrids[c[i].y + 1][c[i].x + 2]->_color = { 255,0,204,255 };
+			break;
+		case 5:
+			StageMNG::GetIns()->otherstagegrids[c[i].y + 1][c[i].x + 2]->_color = { 1, 0.5f, 0, 255 };
+			break;
+		case 6:
+			StageMNG::GetIns()->otherstagegrids[c[i].y + 1][c[i].x + 2]->_color = { 0, 0, 255, 255 };
+			break;
+		case 7:
+			StageMNG::GetIns()->otherstagegrids[c[i].y + 1][c[i].x + 2]->_color = { 255, 255, 0, 255 };
+			break;
+		default:
+			break;
+		}
+		switch (colornum)
+		{
+		case 1:
+			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 0, 200, 200, 255 };
+			break;
+		case 2:
+			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 255, 0, 0, 255 };
+			break;
+		case 3:
+			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 0, 255, 0, 255 };
 			break;
 		case 4:
 			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 255,0,204,255 };
 			break;
 		case 5:
-			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 51,50,0,255 };
+			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 1, 0.5f, 0, 255 };
 			break;
 		case 6:
-			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 102,0,0,255 };
+			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 0, 0, 255, 255 };
 			break;
 		case 7:
-			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 153,51,0,255 };
+			StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->_color = { 255, 255, 0, 255 };
 			break;
 		default:
 			break;
@@ -260,4 +302,5 @@ void GameScene::Exit()
 	cout << "EXIT" << endl;
 	StageMNG::GetIns()->DeleteStage();
 	StageMNG::GetIns()->DeleteOtherStage();
+	delete label;
 }

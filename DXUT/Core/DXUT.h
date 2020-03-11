@@ -351,6 +351,8 @@ void      WINAPI DXUTDestroyState(); // Optional method to destroy DXUT's memory
 #include <time.h>
 #include <list>
 #include <vector>
+#include <string.h>
+#include <string>
 using namespace std;
 
 typedef D3DXVECTOR2 Vec2;

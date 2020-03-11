@@ -108,7 +108,9 @@
       <Filter>Tetris</Filter>
     </ClCompile>
     <ClCompile Include="Stage.cpp" />
-    <ClCompile Include="Label.cpp" />
+    <ClCompile Include="Label.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Director.h">
@@ -139,7 +141,9 @@
       <Filter>Tetris</Filter>
     </ClInclude>
     <ClInclude Include="Stage.h" />
-    <ClInclude Include="Label.h" />
+    <ClInclude Include="Label.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">

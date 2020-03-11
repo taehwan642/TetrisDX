@@ -3,6 +3,7 @@
 #include "Sprite.h"
 #include "Camera.h"
 #include "Stage.h"
+#include "Label.h"  
 class GameScene :
 	public Scene
 {
@@ -11,12 +12,16 @@ public:
 	void Init() override;
 	void Update() override;
 	void Exit() override;
+    Label* label;
+    int score;
     float time = 0;
     int field[Stage_Height][Stage_Width] = {0};
     Vec2 a[4], b[4];
     Vec2 c[4];
     int nextnum;
+    int currnum;
     int colornum;
+    int nextcolornum;
     int dx;
     float delay;
     bool rotate;
