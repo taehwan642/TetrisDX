@@ -385,22 +385,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Label.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Stage.cpp" />
-    <ClCompile Include="Tetromino.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Director.h" />
     <ClInclude Include="GameScene.h" />
+    <ClInclude Include="Label.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Stage.h" />
-    <ClInclude Include="Tetromino.h" />
     <ClInclude Include="Texture.h" />
     <None Include="DXUT\Optional\directx.ico" />
     <ClInclude Include="DXUT\Core\DXUT.h" />

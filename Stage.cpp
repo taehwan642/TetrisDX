@@ -22,6 +22,22 @@ void StageMNG::CreateStage()
 	}
 }
 
+void StageMNG::CreateOtherStage()
+{
+	otherstagegrids.resize(10);
+	for (int i = 0; i < 6; i++)
+		otherstagegrids[i].resize(10);
+	for (int i = 0; i < 6; i++)
+	{
+		for (int j = 0; j < 6; j++)
+		{
+			Grid* grid = new Grid();
+			otherstagegrids[i][j] = grid;
+			grid->_position = { ((float)j * 50) + 700, ((float)i * 50) + 450};
+		}
+	}
+}
+
 void StageMNG::DeleteStage()
 {
 	for (int i = 0; i < Stage_Height; i++)
@@ -32,4 +48,13 @@ void StageMNG::DeleteStage()
 		}
 	}
 	stagegrids.clear();
+}
+
+void StageMNG::DeleteOtherStage()
+{
+	for (auto it : otherstage)
+	{
+		delete it;
+	}
+	otherstage.clear();
 }

@@ -3,7 +3,6 @@
 #include "Sprite.h"
 #include "Camera.h"
 #include "Stage.h"
-#include "Tetromino.h"
 class GameScene :
 	public Scene
 {
@@ -15,6 +14,8 @@ public:
     float time = 0;
     int field[Stage_Height][Stage_Width] = {0};
     Vec2 a[4], b[4];
+    Vec2 c[4];
+    int nextnum;
     int colornum;
     int dx;
     float delay;

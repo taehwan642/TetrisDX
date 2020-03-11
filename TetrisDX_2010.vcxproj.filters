@@ -104,13 +104,11 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Tetromino.cpp">
-      <Filter>Tetris</Filter>
-    </ClCompile>
     <ClCompile Include="GameScene.cpp">
       <Filter>Tetris</Filter>
     </ClCompile>
     <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Label.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Director.h">
@@ -137,13 +135,11 @@
     <ClInclude Include="Camera.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Tetromino.h">
-      <Filter>Tetris</Filter>
-    </ClInclude>
     <ClInclude Include="GameScene.h">
       <Filter>Tetris</Filter>
     </ClInclude>
     <ClInclude Include="Stage.h" />
+    <ClInclude Include="Label.h" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
