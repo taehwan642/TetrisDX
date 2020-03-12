@@ -52,9 +52,12 @@ void StageMNG::DeleteStage()
 
 void StageMNG::DeleteOtherStage()
 {
-	for (auto it : otherstage)
+	for (int i = 0; i < 6; i++)
 	{
-		delete it;
+		for (int j = 0; j < 6; j++)
+		{
+			delete otherstagegrids[i][j];
+		}
 	}
-	otherstage.clear();
+	otherstagegrids.clear();
 }

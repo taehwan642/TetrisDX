@@ -4,6 +4,7 @@
 #include "Camera.h"
 #include "Stage.h"
 #include "Label.h"  
+#include "MainScene.h"
 class GameScene :
 	public Scene
 {
@@ -25,6 +26,7 @@ public:
     int dx;
     float delay;
     bool rotate;
+    bool scenechange;
     int tetrominosss[7][4] =
     {
         1,3,5,7, // I

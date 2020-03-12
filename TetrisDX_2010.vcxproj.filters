@@ -107,9 +107,14 @@
     <ClCompile Include="GameScene.cpp">
       <Filter>Tetris</Filter>
     </ClCompile>
-    <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Label.cpp">
       <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScene.cpp">
+      <Filter>Tetris</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>Tetris</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -140,9 +145,14 @@
     <ClInclude Include="GameScene.h">
       <Filter>Tetris</Filter>
     </ClInclude>
-    <ClInclude Include="Stage.h" />
     <ClInclude Include="Label.h">
       <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MainScene.h">
+      <Filter>Tetris</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>Tetris</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

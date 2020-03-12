@@ -1,17 +1,8 @@
 #include "DXUT.h"
 #include "GameScene.h"
 // 해야할거 
-// 2. 점수
-// ! 추가로 각 도형마다 색깔 입히기. 그거 n에 따라서 하면 될듯 colornum
 // 4. 메인 씬 만들기
 // 5. 소리 띄우기 
-// I == 0, 200, 200, 255  1
-// Z == 255, 0, 0, 255  2
-// S == 0, 255, 50, 255  3
-// T == 4;_color = { 255,0,204,255 };  4
-// L == 255, 102, 0, 255  5
-// J == 0, 0, 255, 255  6
-// O == 255, 255, 0, 255  7
 bool GameScene::check()
 {
 	for (int i = 0; i < 4; i++)
@@ -84,8 +75,9 @@ void GameScene::Init()
 	label = new Label();
 	score = 0;
 	label->_scale = { 2,2 };
+	label->labeldistance = 50;
 	label->Create_Label(score, { 600,200 });
-
+	scenechange = false;
 }
 
 void GameScene::Update()
@@ -117,14 +109,19 @@ void GameScene::Update()
 	if (DXUTIsKeyDown('S'))
 		delay = 0.1f;
 	if (DXUTWasKeyPressed('P'))
-		for (int i = 0; i < Stage_Height; i++)
-		{
-			for (int j = 0; j < Stage_Width; j++)
-			{
-				cout << field[i][j] << " ";
-			}
-			cout << endl;
-		}
+	{
+		scenechange = !scenechange;
+		Director::GetIns()->SceneSet(new MainScene);
+	}
+		//for (int i = 0; i < Stage_Height; i++)
+		//{
+		//	for (int j = 0; j < Stage_Width; j++)
+		//	{
+		//		cout << field[i][j] << " ";
+		//	}
+		//	cout << endl;
+		//}
+	
 	for (int i = 0; i < 4; i++) { b[i] = a[i]; a[i].x += dx; }
 	if (!check()) for (int i = 0; i < 4; i++) a[i] = b[i];
 
@@ -172,11 +169,12 @@ void GameScene::Update()
 	dx = 0;
 	rotate = false;
 	for (int i = 0; i < 4; i++)
-		if (field[(int)b[i].y][(int)b[i].x] != 0)
+		if (field[(int)b[i].x][(int)b[i].y])
 		{
+			cout << "??" << endl;
 			// 꼇다. 패배한거임.
+			//Director::GetIns()->SceneSet(new MainScene);
 		}
-	
 	
 	int k = Stage_Height - 1;
 	for (int i = Stage_Height - 1; i > 0; i--)
@@ -236,9 +234,12 @@ void GameScene::Update()
 	{
 		if (a[i].y < 0)
 		{
-			cout << "!!" << endl;
 			return;
 		}
+		if (scenechange)
+			return;
+		//if (StageMNG::GetIns()->stagegrids[a[i].y][a[i].x] == nullptr)
+		//	return;
 		StageMNG::GetIns()->stagegrids[a[i].y][a[i].x]->SetTexture(L"poly.png");
 		StageMNG::GetIns()->otherstagegrids[c[i].y + 1][c[i].x + 2]->SetTexture(L"poly.png");
 		//cout << colornum << endl;
@@ -299,8 +300,9 @@ void GameScene::Update()
 
 void GameScene::Exit()
 {
-	cout << "EXIT" << endl;
-	StageMNG::GetIns()->DeleteStage();
-	StageMNG::GetIns()->DeleteOtherStage();
+	//StageMNG::GetIns()->DeleteStage();
+	//StageMNG::GetIns()->DeleteOtherStage();
+	label->Delete_Label();
 	delete label;
+	cout << "EXIT" << endl;
 }
