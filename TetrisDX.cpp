@@ -75,7 +75,7 @@ int main(void)
     DXUTCreateWindow( L"TetrisDX" );
     DXUTCreateDevice( true, Screen_Width, Screen_Height );
 
-    Director::GetIns()->SceneSet(new GameScene);
+    Director::GetIns()->SceneSet(new MainScene);
 
     // Start the render loop
     DXUTMainLoop();

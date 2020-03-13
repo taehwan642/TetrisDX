@@ -21,4 +21,5 @@ public:
 	static float deltatime;
 	static float timescale;
 	static int score;
+	static bool isgameover;
 };

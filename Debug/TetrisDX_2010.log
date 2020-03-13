@@ -1,44 +1,52 @@
-﻿  GameScene.cpp
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(44,38): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(45,38): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(47,37): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(48,37): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(128,10): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(129,10): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(159,41): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(160,41): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(162,40): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(163,40): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(236,46): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(236,58): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(240,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(240,59): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(243,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(243,59): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(246,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(246,59): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(249,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(249,59): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(252,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(252,59): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(255,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(255,59): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(258,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(258,59): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(268,38): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(268,46): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(272,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(272,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(275,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(275,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(278,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(278,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(281,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(281,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(284,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(284,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(287,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(287,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(290,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\taehw\Desktop\TetrisDX\GameScene.cpp(290,47): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  EndScene.cpp
+  GameScene.cpp
+  MainScene.cpp
+  Stage.cpp
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(21,15): warning C4244: '인수': 'float'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(21,18): warning C4244: '인수': 'float'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(74,38): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(75,38): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(77,37): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(78,37): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(111,39): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(112,39): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(113,38): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(114,38): warning C4244: '=': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(155,10): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(156,10): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(270,18): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(270,26): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(274,19): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(274,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(277,19): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(277,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(280,19): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(280,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(283,19): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(283,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(286,19): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(286,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(289,19): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(289,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(292,19): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(292,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(307,26): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(307,38): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(311,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(311,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(314,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(314,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(317,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(317,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(320,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(320,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(323,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(323,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(326,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(326,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(329,27): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\taehw\Desktop\TetrisDX\Stage.cpp(329,39): warning C4244: '인수': 'FLOAT'에서 'const unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TetrisDX.cpp
+C:\Users\taehw\Desktop\TetrisDX\TetrisDX.cpp(17,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
   TetrisDX_2010.vcxproj -> C:\Users\taehw\Desktop\TetrisDX\Debug\TetrisDX.exe
