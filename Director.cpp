@@ -8,15 +8,22 @@ void Director::DirectorInit()
 
 void Director::SceneSet(Scene* s)
 {
-	if (currentScene != nullptr)
+	if (currentScene != nullptr && s != nullptr)
 		currentScene->Exit();
-	currentScene = s;
-	currentScene->Init();
+	if (s != nullptr)
+	{
+		currentScene = s;
+		currentScene->Init();
+	}
 }
 
 void Director::SceneUpdate()
 {
-	if(currentScene)
+	if (currentScene != nullptr)
+	{
 		currentScene->Update();
-	Renderer::GetIns()->Render();
+		Renderer::GetIns()->Render();
+	}
+	else
+		cout << "null" << endl;
 }

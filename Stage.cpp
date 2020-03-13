@@ -44,7 +44,7 @@ void StageMNG::DeleteStage()
 	{
 		for (int j = 0; j < Stage_Width; j++)
 		{
-			delete stagegrids[i][j];
+				delete stagegrids[i][j];
 		}
 	}
 	stagegrids.clear();
@@ -56,7 +56,8 @@ void StageMNG::DeleteOtherStage()
 	{
 		for (int j = 0; j < 6; j++)
 		{
-			delete otherstagegrids[i][j];
+			cout << "delete " << i << " " << j << endl;
+				delete otherstagegrids[i][j];
 		}
 	}
 	otherstagegrids.clear();

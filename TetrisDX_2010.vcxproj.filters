@@ -116,6 +116,9 @@
     <ClCompile Include="Stage.cpp">
       <Filter>Tetris</Filter>
     </ClCompile>
+    <ClCompile Include="EndScene.cpp">
+      <Filter>Tetris</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Director.h">
@@ -152,6 +155,9 @@
       <Filter>Tetris</Filter>
     </ClInclude>
     <ClInclude Include="Stage.h">
+      <Filter>Tetris</Filter>
+    </ClInclude>
+    <ClInclude Include="EndScene.h">
       <Filter>Tetris</Filter>
     </ClInclude>
   </ItemGroup>

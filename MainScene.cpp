@@ -3,15 +3,14 @@
 
 void MainScene::Init()
 {
-	StageMNG::GetIns()->DeleteStage();
-	StageMNG::GetIns()->DeleteOtherStage();
+
 }
 
 void MainScene::Update()
 {
 	if (DXUTWasKeyPressed('P'))
 	{
-		Director::GetIns()->SceneSet(new GameScene);
+		//Director::GetIns()->SceneSet(new GameScene);
 	}
 }
 
